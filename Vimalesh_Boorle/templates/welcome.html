@@ -1,0 +1,74 @@
+<!-- welcome.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Contact Management</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 0;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInUp 1.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .continue-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 10px 20px;
+            background-color: #93c572; /* Pistachio color */
+            color: #fff;
+            border: none;
+            border-radius: 7px;
+            text-decoration: none;
+            font-size: 16px;
+            font-family: 'Arial, sans-serif';
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .continue-button:hover {
+            background-color: #769b4d; /* Darker pistachio color on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to Contact Management</h1>
+    <!-- "Continue" button -->
+    <a href="{% url 'task_list' %}" class="continue-button">Continue</a>
+    <script>
+        // Add JavaScript to handle the transition effect
+        document.addEventListener("DOMContentLoaded", function () {
+            document.body.style.backgroundColor = "#f8f9fa"; // Set initial background color
+            setTimeout(function () {
+                document.body.style.backgroundColor = "#ffffff"; // Set final background color
+            }, 1500); // Adjust the duration (in milliseconds) as needed
+        });
+    </script>
+</body>
+
+</html>
