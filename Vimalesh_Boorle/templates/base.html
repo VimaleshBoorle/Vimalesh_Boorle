@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/[email protected]/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous">
+    <!-- Bootstrap Icons CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/[email protected]/font/bootstrap-icons.css">
+    <title>Contact Management</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			background-color: #f8f9fa;
+            color: #343a40;
+            margin-bottom: 60px;
+			position: relative;
+			
+        }
+        .content {
+            padding: 20px;
+        }
+        .footer {
+            background-color: #93c572;
+            color: #000000;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .signature {
+            font-size: larger;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="content">
+        {% block content %}{% endblock content %}
+    </div>
+    <div class="footer">
+        <p class="signature">&copy; 2023 Vimalesh Boorle</p>
+    </div>
+</body>
+</html>
